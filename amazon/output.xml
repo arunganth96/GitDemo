@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.5 on win32)" generated="20231002 12:57:44.198" rpa="false" schemaversion="3">
+<suite id="s1" name="Test1" source="C:\Users\1809569\PycharmProjects\RobotFramework\amazon\test1.robot">
+<test id="s1-t1" name="Test title" line="7">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/AutomationPractice/</arg>
+<arg>Edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231002 12:57:44.413" level="INFO">Opening browser 'Edge' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
+<status status="PASS" starttime="20231002 12:57:44.413" endtime="20231002 12:58:37.388"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231002 12:58:37.388" endtime="20231002 12:58:37.704"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a[id='opentab']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231002 12:58:37.705" level="INFO">Clicking element 'css:a[id='opentab']'.</msg>
+<status status="PASS" starttime="20231002 12:58:37.705" endtime="20231002 12:58:37.793"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>@{li}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231002 12:58:37.810" level="INFO">@{li} = [ 4E96A3965D67E0B4E73ADA86585B468D | B1F8F9704BC44B77E5E0B1E90243A8C1 ]</msg>
+<status status="PASS" starttime="20231002 12:58:37.794" endtime="20231002 12:58:37.810"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${li}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20231002 12:58:37.811" level="INFO">Length is 2</msg>
+<msg timestamp="20231002 12:58:37.811" level="INFO">${length} = 2</msg>
+<status status="PASS" starttime="20231002 12:58:37.810" endtime="20231002 12:58:37.811"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${length}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231002 12:58:37.811" endtime="20231002 12:58:37.811"/>
+</kw>
+<for flavor="IN">
+<var>${l}</var>
+<value>${li}</value>
+<iter>
+<var name="${l}">['4E96A3965D67E0B4E73ADA86585B468D', 'B1F8F9704BC44B77E5E0B1E90243A8C1']</var>
+<kw name="select window">
+<arg>${l}</arg>
+<msg timestamp="20231002 12:58:37.816" level="FAIL">No keyword with name 'select window' found.</msg>
+<status status="FAIL" starttime="20231002 12:58:37.816" endtime="20231002 12:58:37.816"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>get location</arg>
+<arg>get text</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231002 12:58:37.816" endtime="20231002 12:58:37.816"/>
+</kw>
+<status status="FAIL" starttime="20231002 12:58:37.812" endtime="20231002 12:58:37.816"/>
+</iter>
+<status status="FAIL" starttime="20231002 12:58:37.812" endtime="20231002 12:58:37.816"/>
+</for>
+<status status="FAIL" starttime="20231002 12:57:44.412" endtime="20231002 12:58:37.817">No keyword with name 'select window' found.</status>
+</test>
+<status status="FAIL" starttime="20231002 12:57:44.200" endtime="20231002 12:58:37.818"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
