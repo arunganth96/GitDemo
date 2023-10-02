@@ -10,6 +10,7 @@ check valid login
     open context menu   xpath://input[@id='username']
     Enter username and password  rahulshettyacademy  learning
     select from list by index  xpath://select[@class='form-control']   1
+    close browser
 
 
 
