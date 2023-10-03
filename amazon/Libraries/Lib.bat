@@ -1,2 +1,2 @@
 pip install robotframework
-pip install robotframeowork-seleniumlibrary
+pip install robotframework-seleniumlibrary
